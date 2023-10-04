@@ -251,7 +251,7 @@ function _CalendarContainer<T extends ICalendarEventBase>({
     return (
       <React.Fragment>
         <Text>{targetDate.format('MM')}</Text>
-        <CalendarHeaderForMonthView {...headerProps} />
+        <HeaderComponentForMonthView {...headerProps} />
         <CalendarBodyForMonthView<T>
           {...commonProps}
           style={bodyContainerStyle}
