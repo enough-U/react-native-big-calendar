@@ -183,8 +183,6 @@ function _CalendarBodyForMonthView<T extends ICalendarEventBase>({
           tmpDay = tmpDay.add(1, 'day')
         }
 
-        console.log(finalEvents)
-
         return finalEvents
       }
     },
