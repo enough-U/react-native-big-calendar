@@ -169,7 +169,13 @@ function _CalendarBodyForMonthView<T extends ICalendarEventBase>({
               if (eventToMoveUp != undefined) {
                 //remove eventToMoveUp from finalEvents first
                 if (finalEvents.indexOf(eventToMoveUp) > -1) {
-                  finalEvents.splice(finalEvents.indexOf(eventToMoveUp), 99)
+                  // finalEvents.splice(finalEvents.indexOf(eventToMoveUp), 1)
+                  finalEvents.splice(
+                    finalEvents.indexOf(eventToMoveUp),
+                    1,
+                    finalEvents[finalEvents.length - 1],
+                  )
+                  finalEvents.pop()
                 }
 
                 if (finalEvents.indexOf(event) > -1) {
